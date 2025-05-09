@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2025 at 05:37 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.1.30
+-- Waktu pembuatan: 09 Bulan Mei 2025 pada 20.55
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_opentrip`
+-- Database: `opentriplombok`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fasilitas`
+-- Struktur dari tabel `fasilitas`
 --
 
 CREATE TABLE `fasilitas` (
@@ -35,7 +35,7 @@ CREATE TABLE `fasilitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `fasilitas`
+-- Dumping data untuk tabel `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`id_fasilitas`, `kode_paket`, `nama_fasilitas`, `keterangan_fasilitas`) VALUES
@@ -43,12 +43,18 @@ INSERT INTO `fasilitas` (`id_fasilitas`, `kode_paket`, `nama_fasilitas`, `ketera
 (3, '', 'makan 3x', '1x saat mau naik\r\n1x saat di gunung (makan malam)\r\n1x saat hendak turun'),
 (4, 'PKT001', 'makan 3x', '1x saat mau naik\r\n1x saat di gunung(makan malem)\r\n1x saat mau turun(optional)'),
 (8, 'PKT008', 'makan 3x', 'sebelum berangkat 1x\r\ndi gunung 1x\r\nsebelum turun gunung 1x'),
-(12, 'PKT011', 'FASILITAS ABAL2', 'ABAL2');
+(13, 'PKT001', 'Heling Setelah Uts', 'Ayok kita rayakan Nilai A kita'),
+(14, 'PKT002', 'Heling Setelah Uts', 'Merayakan Nilai A'),
+(15, 'PKT003', 'Heling Setelah Uts', 'Merayakan Uts'),
+(16, 'PKT004', 'Heling Setelah Uts', 'Ingin DI rayakan'),
+(17, 'PKT005', 'Puncak RInjani', 'Kepo dah'),
+(18, 'PKT006', 'Anak dara tunngu aku', 'Kepu banget dah'),
+(19, 'PKT007', 'Ntah lah', 'Cari tau Sendiri ha ha ha');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedback`
+-- Struktur dari tabel `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -61,19 +67,17 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `feedback`
+-- Dumping data untuk tabel `feedback`
 --
 
 INSERT INTO `feedback` (`id`, `email`, `nama_lengkap`, `nomer_hp`, `isi_feedback`, `status_feedback`) VALUES
-(1, 'rizanalfalah@gmail.com', 'muhamad Rizan Alfalah', 83817566, 'pemesanan masih ribet', 1),
-(2, 'redeyes199802@gmail.com', 'feisal akbar G', 234234, 'banyak yang harus di tambahkan pada pemesanan paket', 0),
-(3, 'rizanalfalah@gmail.com', 'reza', 0, 'dsa', 0),
-(4, 'zahraaraa688@gmail.com', 'Zara', 88, 'Contoh kontak', 0);
+(4, 'zahraaraa688@gmail.com', 'Zara', 88, 'Contoh kontak', 0),
+(5, 'msaririzki15@gmail.com', 'Muhamad Sari Rizki', 2147483647, 'Pengen Nilai A Bang', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallerygunung`
+-- Struktur dari tabel `gallerygunung`
 --
 
 CREATE TABLE `gallerygunung` (
@@ -87,16 +91,20 @@ CREATE TABLE `gallerygunung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `gallerygunung`
+-- Dumping data untuk tabel `gallerygunung`
 --
 
 INSERT INTO `gallerygunung` (`id_gambar`, `gambar_satu`, `gambar_dua`, `gambar_tiga`, `gambar_empat`, `gambar_lima`, `kode_gunung`) VALUES
-(18, 'be9f73395d152292365b0f5b031be052.jpg', '6533d9d12bfdc2a3bb108e780b6a239c.jpg', '228daedfce94af3ca0eaaffd714f7aec.jpg', 'e89803d1eaf71ab5158aa8150be3bcf9.jpg', '9d1395947bb79595885d74a67b7348c8.jpg', 'DGN011');
+(18, 'Sunrise_over_Gunung_Rinjani_(now_with_mountain_shadow!)_3840x2399_OC.jpg', 'rinjani4.jpg', 'rinjani5.jpg', 'gunung-rinjani2.jpg', 'rinjani.jpg', 'DGN011'),
+(19, 'dara1.jpg', '17d4ce817c8ed9ac1432cff18c2d284e.jpg', '3040ffb06d1a084ee4d02d38812ff46a.JPG', '0c11ec5837a785e359dccc4a47ce2ffb.jpg', 'dara2.jpg', 'DGN012'),
+(20, 'f4614b5cb70ddc3d0d5b8caa59e4c5f2.jpg', '20e33ad3bb303e6d22ee2b6110103dbc.jpg', 'ce6a5773911143376ca70f9e1edff796.jpg', '4.jpeg', '0238165a932dc5e4422f2b77f8547d6b.jpg', 'DGN013'),
+(21, '6.jpg', '7.jpg', '0c98ebf9bbc51d4d3a1591c3ea494db8.jpg', 'b6d88b3f72d2bcdcaa2eabde95107664.jpg', 'bc78502305cfa91b55b1482c26d74f04.jpg', 'DGN014'),
+(22, '51988f1f212a25ced1dd0c17e8166100.jpg', 'bf1c34beafbe0336e647f76a2496ef5f.jpg', '6b9109e5a97437efb391ab78e50b4d12.jpg', '852ab6fcc51bbcb27edb6a362a265681.jpg', '1.jpg', 'DGN015');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gunung`
+-- Struktur dari tabel `gunung`
 --
 
 CREATE TABLE `gunung` (
@@ -111,16 +119,20 @@ CREATE TABLE `gunung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `gunung`
+-- Dumping data untuk tabel `gunung`
 --
 
 INSERT INTO `gunung` (`id_gunung`, `kode_gunung`, `nama_gunung`, `ketinggian`, `rata_rata_suhu`, `kategori_id`, `keterangan`, `alamat`) VALUES
-(21, 'DGN011', 'Gunung Rinjani', 3, 12, '', 'Nikmati petualangan tak terlupakan di Gunung Rinjani, gunung berapi tertinggi kedua di Indonesia. Dengan pemandangan menakjubkan, danau Segara Anak yang memukau, serta udara pegunungan yang segar — sempurna untuk pendaki dan pencinta alam.\r\nAyo, taklukkan', 'Gunung Rinjani adalah gunung yang berlokasi di Pulau Lombok, Nusa Tenggara Barat.');
+(21, 'DGN011', 'Gunung Rinjani', 3, 12, '', 'Nikmati petualangan tak terlupakan di Gunung Rinjani, gunung berapi tertinggi kedua di Indonesia. Dengan pemandangan menakjubkan, danau Segara Anak yang memukau, serta udara pegunungan yang segar — sempurna untuk pendaki dan pencinta alam.\r\nAyo, taklukkan', 'Gunung Rinjani adalah gunung yang berlokasi di Pulau Lombok, Nusa Tenggara Barat.'),
+(22, 'DGN012', 'Anak Dara', 1, 15, '', 'Temukan Keindahan Bukit Anak Dara!\r\nRasakan sensasi sunrise dari ketinggian Bukit Anak Dara, salah satu spot terbaik di Lombok Timur. Pendakian singkat, panorama luar biasa, dan udara sejuk jadi perpaduan sempurna untuk liburan singkat yang tak terlupakan', 'Bukit Anak Dara · Sembalun Lawang, Sembalun, Selong, Nusa Tenggara Bar. 83666, Indonesia'),
+(23, 'DGN013', 'Bukit Gedong', 2, 16, '', 'Nikmati Pesona Bukit Gedong!\r\nBukit Gedong menyuguhkan pemandangan alam yang memesona dari ketinggian, cocok untuk spot foto dan santai di akhir pekan. Lokasinya mudah dijangkau, dengan udara segar dan nuansa hijau yang menenangkan.\r\nLiburan singkat? Buki', 'Sembalun Bumbung, Kec. Sembalun, Kabupaten Lombok Timur, Nusa Tenggara Bar.'),
+(24, 'DGN014', 'Bukit Kondo', 1, 15, '', 'Nikmati Pesona Bukit Kondo!\r\nBukit Kondo, surga tersembunyi di Lombok Timur, menawarkan panorama alam yang memukau dengan hamparan awan dan pemandangan pegunungan di pagi hari. Cocok untuk camping dan menikmati sunrise yang magis dari atas ketinggian.\r\nYu', 'Sembalun Bumbung, Kec. Sembalun, Kabupaten Lombok Timur, Nusa Tenggara Bar.'),
+(25, 'DGN015', 'Sempana', 8, 13, '', 'Jelajahi Keindahan Bukit Sempana!\r\nBukit Sempana, destinasi favorit pendaki di Lombok Timur, menawarkan pemandangan alam hijau yang memanjakan mata dan udara segar khas pegunungan. Cocok untuk pendakian ringan dan spot foto sunrise yang luar biasa.\r\nAyo k', 'Sembalun Bumbung, Kec. Sembalun, Kabupaten Lombok Timur, Nusa Tenggara Bar.');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jalurpendakian`
+-- Struktur dari tabel `jalurpendakian`
 --
 
 CREATE TABLE `jalurpendakian` (
@@ -134,16 +146,20 @@ CREATE TABLE `jalurpendakian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `jalurpendakian`
+-- Dumping data untuk tabel `jalurpendakian`
 --
 
 INSERT INTO `jalurpendakian` (`id_jalur`, `nama_jalur`, `jumlah_pos`, `jarak_jalur`, `foto_jalur`, `gambar_basecamp`, `kode_gunung`) VALUES
-(24, 'Via Sembalun', 3, 5, '8d2c783a8bcd6462f9ab72f49894892a.jpg', '57377c365e917047441a93c63cae10d6.jpg', 'DGN011');
+(24, 'Via Sembalun', 3, 5, '8d2c783a8bcd6462f9ab72f49894892a.jpg', '57377c365e917047441a93c63cae10d6.jpg', 'DGN011'),
+(25, 'Tanjakan Cinta', 2, 3, '19d3f4a4e65338b5d4c61a4a29477319.jpg', 'bc.jfif', 'DGN012'),
+(26, 'Gedong', 2, 3, 'ba97026c92e78b0fbb78603d51ece5e4.jpg', 'dd99a71c4e3912d4c76cf9de9dfcddf3.jpg', 'DGN013'),
+(27, 'Kondo', 2, 3, '2.jpeg', 'ecfbc9f17e6738a5c729d29c6e3d6cbd.jpg', 'DGN014'),
+(28, 'Sempana', 3, 3, 'a4fd0bdb0060f77bd1fad2c2ea482a52.jpg', '3dbb35ad1c970ccab5f811c5033a8a0d.jpg', 'DGN015');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori_gunung`
+-- Struktur dari tabel `kategori_gunung`
 --
 
 CREATE TABLE `kategori_gunung` (
@@ -154,7 +170,7 @@ CREATE TABLE `kategori_gunung` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket_pendakian`
+-- Struktur dari tabel `paket_pendakian`
 --
 
 CREATE TABLE `paket_pendakian` (
@@ -172,17 +188,22 @@ CREATE TABLE `paket_pendakian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `paket_pendakian`
+-- Dumping data untuk tabel `paket_pendakian`
 --
 
 INSERT INTO `paket_pendakian` (`id`, `email`, `kodepaket`, `tanggal_mulai`, `tanggal_berakhir`, `titik_kumpul`, `kouta_paket`, `perlengkapan_pribadi`, `harga_paket`, `no_rekening_admin`, `kode_gunung`) VALUES
-(12, 'Zara@gmail.com', 'PKT010', '2025-05-14', '2025-05-28', 'Basecamp', 13, 'Bawa obat obat pribadi', 175000, 234567890, 'DGN001'),
-(13, 'suthawijaya446@gmail.com', 'PKT011', '2025-05-09', '2025-05-09', 'MATARAM', 0, 'BEEBASSSS', 1000, 2147483647, 'DGN001');
+(14, 'oha@gmail.com', 'PKT001', '2025-05-09', '2030-12-09', 'basecamp rinjani', 10, 'Obat Obatan, Gabju Ganti ,Pasangan', 1500000, 2147483647, 'DGN011'),
+(15, 'riki1@gmail.com', 'PKT002', '2025-05-10', '2032-12-10', 'Bc Anak Dara', 5, 'Pacar', 350, 2147483647, 'DGN012'),
+(16, 'riki1@gmail.com', 'PKT003', '2025-05-10', '2029-12-10', 'Bc Kondo', 5, 'Pacar', 300, 2147483647, 'DGN014'),
+(17, 'riki1@gmail.com', 'PKT004', '2025-05-10', '2031-12-10', 'Bc Sempana', 6, 'Pacar', 400, 2147483647, 'DGN015'),
+(18, 'al1@gmail.com', 'PKT005', '2025-05-10', '2031-12-10', 'Bc Rinjani', 10, 'Bebas dah', 145000, 46437647, 'DGN011'),
+(19, 'al1@gmail.com', 'PKT006', '2025-05-10', '2031-11-10', 'Bc Anak Dara', 249, 'Bebas bang', 300, 3453464, 'DGN012'),
+(20, 'al1@gmail.com', 'PKT007', '2025-05-10', '2030-10-23', 'Bc Gedong', 3, 'Niat', 200, 453464, 'DGN013');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pembayaran`
+-- Struktur dari tabel `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -200,18 +221,18 @@ CREATE TABLE `pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pembayaran`
+-- Dumping data untuk tabel `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `kode_pembayaran`, `nama_pengirim`, `bank`, `no_rek_pengirim`, `tanggal_pembayaran`, `jumlah_nominal`, `gambar_bukti_pembayaran`, `status_pembayaran`, `kode_pemesanan`, `email`) VALUES
-(13, 'PBN012', 'endah komariyah lestari', 'MANDIRI', 2147483647, '2025-05-09', 350000, 'ed224c438b2a18f1b7b2c28d6c8938d2.png', '1', 'KDP029', 'endahkomarialestari@gmail.com'),
-(14, 'PBN013', 'endah komariyah lestari', 'MANDIRI', 123456789, '2025-05-09', 175000, 'd77d4f3192dccd48fa241d1cc390f583.png', '1', 'KDP030', 'endahkomarialestari@gmail.com'),
-(15, 'PBN014', 'endah komariyah lestari', 'MANDIRI', 123, '2025-05-09', 1000, '8f71f6093d99c738a1dc5355e6e02386.png', '1', 'KDP031', 'endahkomarialestari@gmail.com');
+(16, 'PBN001', 'Muhamad Rizki', 'MANDIRI', 454354544, '2025-05-10', 1500000, '1a4f17e5237f133a79ab76bb10facf35.jpg', '1', 'KDP001', 'msaririzki12@gmail.com'),
+(17, 'PBN002', 'Muhamad Rizki', 'MANDIRI', 2147483647, '2025-05-10', 1500000, 'f0bfdf2b2504a0fba2dbf2edaaa6071a.jpg', '0', 'KDP002', 'msaririzki15@gmail.com'),
+(18, 'PBN003', 'Muhamad Rizki', 'BCA', 436457788, '2025-05-10', 300, '87da093825d7d4e634fc054de00924cf.jpg', '1', 'KDP003', 'msaririzki15@gmail.com');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pemesanan`
+-- Struktur dari tabel `pemesanan`
 --
 
 CREATE TABLE `pemesanan` (
@@ -228,16 +249,16 @@ CREATE TABLE `pemesanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pemesanan`
+-- Dumping data untuk tabel `pemesanan`
 --
 
 INSERT INTO `pemesanan` (`id_pemesanan`, `kode_pemesanan`, `email`, `kode_paket`, `tanggal_pemesanan`, `nama_gunung`, `harga_paket`, `foto_pemesanan`, `kouta_paket`, `sts_kirimPembayaran`) VALUES
-(34, 'KDP029', 'endahkomarialestari@gmail.com', 'PKT001', '2025-05-09', 'Arjuno', '350000', '21d0135aff8c937fc4ee67126ec7faf2.jpg', 1, 'terverifikasi'),
-(35, 'KDP030', 'endahkomarialestari@gmail.com', 'PKT010', '2025-05-09', 'Andong', '175000', '8be287774ceb37441cdadd917ec768ef.jpg', 1, 'terverifikasi'),
-(36, 'KDP031', 'endahkomarialestari@gmail.com', 'PKT011', '2025-05-09', 'Andong', '1000', '8be287774ceb37441cdadd917ec768ef.jpg', 1, 'terverifikasi');
+(37, 'KDP001', 'msaririzki12@gmail.com', 'PKT001', '2025-05-09', 'Gunung Rinjani', '1500000', 'rinjani.jpg', 1, 'terverifikasi'),
+(38, 'KDP002', 'msaririzki15@gmail.com', 'PKT001', '2025-05-09', 'Gunung Rinjani', '1500000', 'rinjani.jpg', 1, 'terkirim'),
+(39, 'KDP003', 'msaririzki15@gmail.com', 'PKT006', '2025-05-09', 'Anak Dara', '300', 'dara2.jpg', 1, 'terverifikasi');
 
 --
--- Triggers `pemesanan`
+-- Trigger `pemesanan`
 --
 DELIMITER $$
 CREATE TRIGGER `tambah_pemesanan` AFTER INSERT ON `pemesanan` FOR EACH ROW begin
@@ -249,7 +270,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -268,7 +289,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `level_akses`, `user_aktif`, `tanggal_registrasi`, `nama_depan`, `nama_belakang`, `alamat`, `foto_profil`, `foto_sampul`, `no_telepon`) VALUES
@@ -276,15 +297,18 @@ INSERT INTO `user` (`id`, `email`, `password`, `level_akses`, `user_aktif`, `tan
 (67, 'zahraaraa688@gmail.com', '$2y$10$w9lvAG92OZamnINUeBKVSenRAvOMVENKFF5Diqmenjf5FWGe3r1Te', 1, 1, 1746545970, 'Zaraaa', 'Admin', 'kekalik', 'default.jpg', 'default.jpg', 2147483647),
 (68, 'pc6zahratusyita@gmail.com', '$2y$10$SMYk/4Flkaa9Y73RNw02Vu8P1Ovh8qZokN0D2XW2x1UNWwPq5pK0i', 3, 1, 1746546187, 'Zara', 'Admin', '', 'default.jpg', 'default.jpg', 0),
 (70, 'Alifahrizki05@gmail.com', '$2y$10$o9/rnnUjjegF2hM/oLLl0eFD66lQPBsgK0LN1AwcSyimuaNIDDjbi', 3, 1, 1746579423, 'Cikey', 'Cantik Cekali', '', 'default.jpg', 'default.jpg', 0),
-(73, 'msaririzki15@gmail.com', '$2y$10$GStix.AH45Zw5U.Gi9ac.eA0iIk64iSi2bTCXYdOitR4y6Ry8RzDi', 3, 0, 1746762345, 'iky', 'oha', '', 'default.jpg', 'default.jpg', 0),
 (74, 'suthawijaya445@gmail.com', '$2y$10$EcKi2rxp7z5OG8i1dg8G/eDKMgNateUerQit0UgmsaMWDD7q7zddK', 1, 1, 1746762407, 'Suhta', 'Dema', '', 'default.jpg', 'default.jpg', 0),
-(75, 'suthawijaya446@gmail.com', '$2y$10$OWPouxk9lGasG0KRlplzief4hLmUznHkUUl/4dRKT4eu4KYjAQXSW', 2, 1, 1746765094, 'made', '', '', 'default.jpg', 'default.jpg', 0),
-(76, 'msaririzki12@gmail.com', '$2y$10$3eKhRvYOmS/x7L1csflMEOnr1/rC9KrL08D7Qb0p3qZoGPed9CKzO', 1, 1, 1746770600, 'Muhamad', 'Rizki', '', 'default.jpg', 'default.jpg', 0);
+(76, 'msaririzki12@gmail.com', '$2y$10$3eKhRvYOmS/x7L1csflMEOnr1/rC9KrL08D7Qb0p3qZoGPed9CKzO', 1, 1, 1746770600, 'Muhamad', 'Rizki', '', 'default.jpg', 'default.jpg', 0),
+(77, 'oha@gmail.com', '$2y$10$sWJvJAZNH/CGLK/PraN6I.jimq/InfBd3P/SPjaPlLqGuATKhkKwS', 2, 1, 1746805368, 'Muhamad', '', '', 'default.jpg', 'default.jpg', 0),
+(78, 'sutha1@gmail.com', '$2y$10$TLXJC0ZVt2ujfTUNTn2UKOIS1WJb3ByD9TxVl8WtcX9vrJ7/ggy9.', 2, 1, 1746808248, 'sutha g', '', '', 'default.jpg', 'default.jpg', 0),
+(79, 'riki1@gmail.com', '$2y$10$lYf2K0ztcAl0JJ1lIcirWe5joaHb9DjMSNKXq/zEoIqWYr/YLUNmC', 2, 1, 1746808270, 'riki g', '', '', 'default.jpg', 'default.jpg', 0),
+(80, 'al1@gmail.com', '$2y$10$WaIt493P7.1DR/Ch/swqqOoU7hMR2.7yjdXKS6/6pJV/oO7xFUYR.', 2, 1, 1746808287, 'al g', '', '', 'default.jpg', 'default.jpg', 0),
+(82, 'msaririzki15@gmail.com', '$2y$10$00fESqYNaMBDlyD1qC9P0Ovj/YrzG.seg9ixxtmkch2vfnnWX4tMW', 3, 1, 1746809854, 'Muhamad', 'Rizki', '', 'default.jpg', 'default.jpg', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `userakses`
+-- Struktur dari tabel `userakses`
 --
 
 CREATE TABLE `userakses` (
@@ -295,7 +319,7 @@ CREATE TABLE `userakses` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usermenu`
+-- Struktur dari tabel `usermenu`
 --
 
 CREATE TABLE `usermenu` (
@@ -304,7 +328,7 @@ CREATE TABLE `usermenu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usermenu`
+-- Dumping data untuk tabel `usermenu`
 --
 
 INSERT INTO `usermenu` (`id`, `menu`) VALUES
@@ -315,7 +339,7 @@ INSERT INTO `usermenu` (`id`, `menu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usersubmenu`
+-- Struktur dari tabel `usersubmenu`
 --
 
 CREATE TABLE `usersubmenu` (
@@ -328,7 +352,7 @@ CREATE TABLE `usersubmenu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usersubmenu`
+-- Dumping data untuk tabel `usersubmenu`
 --
 
 INSERT INTO `usersubmenu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
@@ -348,7 +372,7 @@ INSERT INTO `usersubmenu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usertoken`
+-- Struktur dari tabel `usertoken`
 --
 
 CREATE TABLE `usertoken` (
@@ -359,17 +383,17 @@ CREATE TABLE `usertoken` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usertoken`
+-- Dumping data untuk tabel `usertoken`
 --
 
 INSERT INTO `usertoken` (`id`, `email`, `token`, `tanggal_token`) VALUES
 (16, 'pc6zahratusyita@gmail.com', 'GuiyqfWW0eGfmgoxlEgtzKdXteoKrxG9Cp1hhU1PwJw=', 1746546187),
-(18, 'msaririzki15@gmail.com', '1CnWUECT6168EQD6docX+AvWSAbi3TJv62Aq0vLF/iE=', 1746762345);
+(22, 'msaririzki15@gmail.com', 'Yl+8ATqhPH/zYi0INo+HbYNky/Eb+YtFOQaOehju88s=', 1746809854);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_akses_menu`
+-- Struktur dari tabel `user_akses_menu`
 --
 
 CREATE TABLE `user_akses_menu` (
@@ -379,7 +403,7 @@ CREATE TABLE `user_akses_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user_akses_menu`
+-- Dumping data untuk tabel `user_akses_menu`
 --
 
 INSERT INTO `user_akses_menu` (`id`, `userakses`, `menuakses`) VALUES
@@ -395,188 +419,188 @@ INSERT INTO `user_akses_menu` (`id`, `userakses`, `menuakses`) VALUES
 --
 
 --
--- Indexes for table `fasilitas`
+-- Indeks untuk tabel `fasilitas`
 --
 ALTER TABLE `fasilitas`
   ADD PRIMARY KEY (`id_fasilitas`);
 
 --
--- Indexes for table `feedback`
+-- Indeks untuk tabel `feedback`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gallerygunung`
+-- Indeks untuk tabel `gallerygunung`
 --
 ALTER TABLE `gallerygunung`
   ADD PRIMARY KEY (`id_gambar`);
 
 --
--- Indexes for table `gunung`
+-- Indeks untuk tabel `gunung`
 --
 ALTER TABLE `gunung`
   ADD PRIMARY KEY (`id_gunung`),
   ADD UNIQUE KEY `kode_gunung` (`kode_gunung`);
 
 --
--- Indexes for table `jalurpendakian`
+-- Indeks untuk tabel `jalurpendakian`
 --
 ALTER TABLE `jalurpendakian`
   ADD PRIMARY KEY (`id_jalur`);
 
 --
--- Indexes for table `kategori_gunung`
+-- Indeks untuk tabel `kategori_gunung`
 --
 ALTER TABLE `kategori_gunung`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `paket_pendakian`
+-- Indeks untuk tabel `paket_pendakian`
 --
 ALTER TABLE `paket_pendakian`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `kodepaket` (`kodepaket`);
 
 --
--- Indexes for table `pembayaran`
+-- Indeks untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id_pembayaran`);
 
 --
--- Indexes for table `pemesanan`
+-- Indeks untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`id_pemesanan`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `userakses`
+-- Indeks untuk tabel `userakses`
 --
 ALTER TABLE `userakses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usermenu`
+-- Indeks untuk tabel `usermenu`
 --
 ALTER TABLE `usermenu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usersubmenu`
+-- Indeks untuk tabel `usersubmenu`
 --
 ALTER TABLE `usersubmenu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usertoken`
+-- Indeks untuk tabel `usertoken`
 --
 ALTER TABLE `usertoken`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_akses_menu`
+-- Indeks untuk tabel `user_akses_menu`
 --
 ALTER TABLE `user_akses_menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `fasilitas`
+-- AUTO_INCREMENT untuk tabel `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `feedback`
+-- AUTO_INCREMENT untuk tabel `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `gallerygunung`
+-- AUTO_INCREMENT untuk tabel `gallerygunung`
 --
 ALTER TABLE `gallerygunung`
-  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `gunung`
+-- AUTO_INCREMENT untuk tabel `gunung`
 --
 ALTER TABLE `gunung`
-  MODIFY `id_gunung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_gunung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `jalurpendakian`
+-- AUTO_INCREMENT untuk tabel `jalurpendakian`
 --
 ALTER TABLE `jalurpendakian`
-  MODIFY `id_jalur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_jalur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT for table `kategori_gunung`
+-- AUTO_INCREMENT untuk tabel `kategori_gunung`
 --
 ALTER TABLE `kategori_gunung`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `paket_pendakian`
+-- AUTO_INCREMENT untuk tabel `paket_pendakian`
 --
 ALTER TABLE `paket_pendakian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `pembayaran`
+-- AUTO_INCREMENT untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `pemesanan`
+-- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
--- AUTO_INCREMENT for table `userakses`
+-- AUTO_INCREMENT untuk tabel `userakses`
 --
 ALTER TABLE `userakses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `usermenu`
+-- AUTO_INCREMENT untuk tabel `usermenu`
 --
 ALTER TABLE `usermenu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `usersubmenu`
+-- AUTO_INCREMENT untuk tabel `usersubmenu`
 --
 ALTER TABLE `usersubmenu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `usertoken`
+-- AUTO_INCREMENT untuk tabel `usertoken`
 --
 ALTER TABLE `usertoken`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `user_akses_menu`
+-- AUTO_INCREMENT untuk tabel `user_akses_menu`
 --
 ALTER TABLE `user_akses_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
